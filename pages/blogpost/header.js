@@ -1,0 +1,43 @@
+import React from 'react'
+import styles from '@/styles/header.module.css'
+import Image from 'next/image'
+import Link from 'next/link'
+const Header = () => {
+
+  return (
+   <>
+   <style jsx global>
+    {`
+    .myspan{
+        color: red;
+    }
+    `}
+   </style>
+    <header>
+      <nav>
+    <div className={styles.navbar}>
+      <a href="#" className="logo">
+      <Image src="data:image/jpeg;base64,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" width={30} height={29} alt="Picture of the author" />
+      </a>
+
+
+      <ul className={styles.navlinks}>
+        <li className='myspan'> <Link href="/blogpost/home" >Home</Link></li>
+        <li><Link href="/blogpost/about">about</Link></li>
+        <li><Link href="/blogpost/services">services</Link></li>
+        {/* <li><Link href="/blogpost/contact">contact</Link></li>
+        <l1><Link href="/blogpost/blogpost">blopost</Link></l1>
+        <l1><Link href="/movie/page">movie</Link></l1> */}
+        <li><Link href="/signup">signup</Link></li>
+        <li><Link href="/login">login</Link></li>
+
+
+      </ul>
+    </div>
+  </nav>
+  </header>
+   </>
+  )
+}
+
+export default Header
